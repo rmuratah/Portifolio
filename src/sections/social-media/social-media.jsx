@@ -8,10 +8,14 @@ import InstagramIcon from '../../assets/icons/instagram.png'
 
 const SocialMedia = () => {
 
+    const redes = ['R', 'e', 'd', 'e', 's', '-', 's', 'o', 'c', 'i', 'a', 'i', 's']
+
     return (
         <Section color={'#ADD8E6'}>
             <SectionBox>
-                <TextBox></TextBox>
+                <TextBox>
+                    {redes.map(letra => <P>{letra}</P>)}
+                </TextBox>
                 <ButtonBox>
                     <UL>
                         <LI style={{ '--i': 4 }}><A><Icon src={EmailIcon} />Email</A></LI>
@@ -31,16 +35,33 @@ const SectionBox = styled.div`
     width: 100%;
     height: 100%;
     display: grid;
-    grid-template-columns: 50% 35%;
+    grid-template-columns: 50% 40%;
 `
 
 const TextBox = styled.div`
+    display: flex;
+    justify-content: center;
+    align-items: center;
 `
+
+const P = styled.p`
+    text-transform: uppercase;
+    font-size: 7rem;
+    color: white;
+    letter-spacing: 0.05rem;
+    margin-bottom: 4vh;
+    transition: all.3s;
+    cursor: pointer;
+
+    &:hover{
+        transform: translateY(-30px);
+    }
+`
+
 const ButtonBox = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-
 `
 
 const UL = styled.ul`
@@ -50,7 +71,7 @@ const UL = styled.ul`
 const LI = styled.li`
     position: relative;
     list-style: none;
-    width: 200px;
+    width: 400px;
     background-color: white;
     z-index: var(--i);
     transition: all.5s;
@@ -65,8 +86,8 @@ const LI = styled.li`
         content: '';
         position: absolute;
         top: 0;
-        left: -20px;
-        width: 20px;
+        left: -30px;
+        width: 30px;
         height: 100%;
         background-color: #D6D6D6;
         transform-origin: right;
@@ -81,10 +102,10 @@ const LI = styled.li`
     &::after{
         content: '';
         position: absolute;
-        top: -20px;
+        top: -30px;
         left: 0;
         width: 100%;
-        height: 20px;
+        height: 30px;
         background-color: #EBEBEB;
         transform-origin: bottom;
         transform:  skewX(45deg);
@@ -103,6 +124,7 @@ const Icon = styled.img`
 `
 
 const A = styled.a`
+    font-size: 2rem;
     text-decoration: none;
     color: #999;
     text-transform: uppercase;
