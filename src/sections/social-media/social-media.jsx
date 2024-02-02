@@ -1,31 +1,37 @@
 import styled from "styled-components"
 import Section from "../../components/ui/components/section/section"
-
-import EmailIcon from '../../assets/icons/email.png'
-import LinkedinIcon from '../../assets/icons/linkedin.png'
-import GithubIcon from '../../assets/icons/github.png'
-import InstagramIcon from '../../assets/icons/instagram.png'
+import MySocialMedia from "./my-social-media";
+import { useState } from "react";
 
 const SocialMedia = () => {
 
     const redes = ['R', 'e', 'd', 'e', 's', '-', 's', 'o', 'c', 'i', 'a', 'i', 's']
+    const [HoverImg, setHoverImg] = useState()
+    const [TextBoxColor, setTextBoxColor] = useState('white')
 
     return (
         <Section color={'#ADD8E6'}>
             <SectionBox>
                 <TextBox>
-                    {redes.map(letra => <P>{letra}</P>)}
+                    {redes.map(letra => <P TextBoxColor={TextBoxColor}>{letra}</P>)}
                 </TextBox>
                 <ButtonBox>
                     <UL>
-                        <LI style={{ '--i': 4 }}><A><Icon src={EmailIcon} />Email</A></LI>
-                        <LI style={{ '--i': 3 }}><A><Icon src={LinkedinIcon} />Linkedin</A></LI>
-                        <LI style={{ '--i': 2 }}><A><Icon src={GithubIcon} />GitHub</A></LI>
-                        <LI style={{ '--i': 1 }}><A><Icon src={InstagramIcon} />Instagram</A></LI>
+                        {MySocialMedia.map(Media =>
+                            <LI key={Media.id}
+                                style={{ '--i': Media.order }}
+                                onMouseEnter={() => { setHoverImg(Media); setTextBoxColor(Media.HoverColor[0]) }}
+                                onMouseLeave={() => { setHoverImg(undefined); setTextBoxColor('white') }}
+                                HoverColor={Media.HoverColor}>
+                                <A>
+                                    <Icon src={HoverImg === Media ? Media.Icon[1] : Media.Icon[0]} />{Media.SocialMedia}
+                                </A>
+                            </LI>
+                        )}
                     </UL>
                 </ButtonBox>
             </SectionBox>
-        </Section>
+        </Section >
     )
 }
 
@@ -47,7 +53,7 @@ const TextBox = styled.div`
 const P = styled.p`
     text-transform: uppercase;
     font-size: 7rem;
-    color: white;
+    color: ${props => props.TextBoxColor && `${props.TextBoxColor}`};
     letter-spacing: 0.05rem;
     margin-bottom: 4vh;
     transition: all.3s;
@@ -78,7 +84,7 @@ const LI = styled.li`
 
     &:hover{
         cursor: pointer;
-        background-color: #9FAFBC;
+        background-color: ${props => props.HoverColor && `${props.HoverColor[0]}`};
         transform: translateX(-50px);
     }
 
@@ -96,7 +102,7 @@ const LI = styled.li`
     }
 
     &:hover::before{
-        background-color: #6F879B;
+        background-color: ${props => props.HoverColor && `${props.HoverColor[1]}`};
     }
 
     &::after{
@@ -113,7 +119,7 @@ const LI = styled.li`
     }
 
     &:hover::after{
-        background-color: #879BAB;
+        background-color: ${props => props.HoverColor && `${props.HoverColor[2]}`};
     }
 `
 
@@ -135,6 +141,6 @@ const A = styled.a`
     align-items: center;
 
     &:hover{
-        color: black;
+        color: white;
     }
 `
