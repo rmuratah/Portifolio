@@ -1,15 +1,12 @@
 import styled from "styled-components"
 import Section from "../../components/ui/components/section/section"
 import Card from "../../components/ui/components/card/card"
-import { useState } from "react"
 
 const Projetos = () => {
 
-    const CardList = [1, 2, 8, 4, 5]
-    const [iscardopen, setiscardopen] = useState(-1)
 
     return (
-        <Section color={'#1F1F1F'}>
+        <Section color={'#141414'}>
             <ProjetosBox>
                 <TituloBox>
                     <H1>Projetos</H1>
@@ -17,11 +14,16 @@ const Projetos = () => {
                 <BoxRepositorios>
                     <BoxCards>
                         <BoxCard>
-                            <Card
-                                card={CardList[0]}
-                                iscardopen={iscardopen === CardList[0] ? true : false}
-                                setiscardopen={setiscardopen}
-                            ></Card>
+                            <Card>
+                            </Card>
+                        </BoxCard>
+                        <BoxCard>
+                            <Card>
+                            </Card>
+                        </BoxCard>
+                        <BoxCard>
+                            <Card>
+                            </Card>
                         </BoxCard>
                         {/* {CardList.map((card, index) => {
                             return (

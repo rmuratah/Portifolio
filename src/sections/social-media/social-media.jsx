@@ -10,7 +10,7 @@ const SocialMedia = () => {
     const [textboxcolor, settextboxcolor] = useState('white')
 
     return (
-        <Section color={'#292929'}>
+        <Section color={'#141414'}>
             <SectionBox>
                 <TextBox>
                     {redes.map(letra => <P textboxcolor={textboxcolor}>{letra}</P>)}
