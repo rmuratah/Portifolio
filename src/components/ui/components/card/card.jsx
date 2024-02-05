@@ -1,15 +1,16 @@
 import styled from "styled-components"
 import Tilt from 'react-vanilla-tilt'
 
-const Card = ({ card, isCardOpen }) => {
+const Card = ({ card, iscardopen, setiscardopen }) => {
 
   return (
     <Box style={{
-      width: 300,
       backgroundColor: "#fff",
       margin: '10px',
     }}
-      options={{ scale: 2, max: 35 }} card={card} >
+      options={{ scale: 2, max: 35 }}
+      card={card}
+      iscardopen={iscardopen}>
       <BoxBackGround />
       <BoxAbout>
         <H1>League Of Legends</H1>
@@ -18,7 +19,7 @@ const Card = ({ card, isCardOpen }) => {
           Id optio omnis id sint voluptas qui minus repellat et velit architecto qui facilis deserunt est voluptates voluptatem aut culpa earum!
         </p>
       </BoxAbout>
-      <ShowMore>
+      <ShowMore onClick={() => setiscardopen(card)}>
         Mostrar Mais
       </ShowMore>
     </Box>
@@ -36,6 +37,7 @@ const Box = styled(Tilt)`
     flex-direction: column;
     align-items: center;
     order: ${props => props.card};
+    transition: width 2s;
 `
 
 const H1 = styled.h1`
@@ -57,8 +59,7 @@ const BoxBackGround = styled.div`
     background-size: cover;
     background-position: left center;
     object-fit: fill;
-    `
-
+`
 
 const BoxAbout = styled.div`
   display: flex;

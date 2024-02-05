@@ -7,22 +7,23 @@ const SocialMedia = () => {
 
     const redes = ['R', 'e', 'd', 'e', 's', '-', 's', 'o', 'c', 'i', 'a', 'i', 's']
     const [HoverImg, setHoverImg] = useState()
-    const [TextBoxColor, setTextBoxColor] = useState('white')
+    const [textboxcolor, settextboxcolor] = useState('white')
 
     return (
-        <Section color={'#ADD8E6'}>
+        <Section color={'#292929'}>
             <SectionBox>
                 <TextBox>
-                    {redes.map(letra => <P TextBoxColor={TextBoxColor}>{letra}</P>)}
+                    {redes.map(letra => <P textboxcolor={textboxcolor}>{letra}</P>)}
                 </TextBox>
                 <ButtonBox>
                     <UL>
                         {MySocialMedia.map(Media =>
-                            <LI key={Media.id}
+                            <LI
+                                key={Media.id}
                                 style={{ '--i': Media.order }}
-                                onMouseEnter={() => { setHoverImg(Media); setTextBoxColor(Media.HoverColor[0]) }}
-                                onMouseLeave={() => { setHoverImg(undefined); setTextBoxColor('white') }}
-                                HoverColor={Media.HoverColor}>
+                                onMouseEnter={() => { setHoverImg(Media); settextboxcolor(Media.HoverColor[0]) }}
+                                onMouseLeave={() => { setHoverImg(undefined); settextboxcolor('white') }}
+                                hovercolor={Media.HoverColor}>
                                 <A>
                                     <Icon src={HoverImg === Media ? Media.Icon[1] : Media.Icon[0]} />{Media.SocialMedia}
                                 </A>
@@ -53,7 +54,7 @@ const TextBox = styled.div`
 const P = styled.p`
     text-transform: uppercase;
     font-size: 7rem;
-    color: ${props => props.TextBoxColor && `${props.TextBoxColor}`};
+    color: ${props => props.textboxcolor && `${props.textboxcolor}`};
     letter-spacing: 0.05rem;
     margin-bottom: 4vh;
     transition: all.3s;
@@ -84,7 +85,7 @@ const LI = styled.li`
 
     &:hover{
         cursor: pointer;
-        background-color: ${props => props.HoverColor && `${props.HoverColor[0]}`};
+        background-color: ${props => props.hovercolor && `${props.hovercolor[0]}`};
         transform: translateX(-50px);
     }
 
@@ -102,7 +103,7 @@ const LI = styled.li`
     }
 
     &:hover::before{
-        background-color: ${props => props.HoverColor && `${props.HoverColor[1]}`};
+        background-color: ${props => props.hovercolor && `${props.hovercolor[1]}`};
     }
 
     &::after{
@@ -119,7 +120,7 @@ const LI = styled.li`
     }
 
     &:hover::after{
-        background-color: ${props => props.HoverColor && `${props.HoverColor[2]}`};
+        background-color: ${props => props.hovercolor && `${props.hovercolor[2]}`};
     }
 `
 

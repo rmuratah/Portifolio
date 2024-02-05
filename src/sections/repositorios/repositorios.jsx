@@ -6,23 +6,35 @@ import { useState } from "react"
 const Projetos = () => {
 
     const CardList = [1, 2, 8, 4, 5]
-    const [isCardOpen, setIsCardOpen] = useState(0)
+    const [iscardopen, setiscardopen] = useState(-1)
 
     return (
-        <Section color={'#8af48a'}>
+        <Section color={'#1F1F1F'}>
             <ProjetosBox>
                 <TituloBox>
                     <H1>Projetos</H1>
                 </TituloBox>
                 <BoxRepositorios>
                     <BoxCards>
-                        {CardList.map((card, index) => {
+                        <BoxCard>
+                            <Card
+                                card={CardList[0]}
+                                iscardopen={iscardopen === CardList[0] ? true : false}
+                                setiscardopen={setiscardopen}
+                            ></Card>
+                        </BoxCard>
+                        {/* {CardList.map((card, index) => {
                             return (
-                                <BoxCard onClick={() => setIsCardOpen(isCardOpen !== card && card)}>
-                                    <Card key={index} index={index} card={card} isCardOpen={isCardOpen === card ? true : false}></Card>
+                                <BoxCard key={index}>
+                                    <Card
+                                        index={index}
+                                        card={card}
+                                        isCardOpen={isCardOpen === card ? true : false}
+                                        setIsCardOpen={setIsCardOpen}
+                                    ></Card>
                                 </BoxCard>
                             )
-                        })}
+                        })} */}
                     </BoxCards>
                 </BoxRepositorios>
             </ProjetosBox>
