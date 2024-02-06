@@ -24,7 +24,7 @@ const Habilidades = () => {
 					<H1>Habilidades</H1>
 				</TituloBox>
 				<HabilidadeBox>
-					<H2>Linguagens de programação</H2>
+					<H2>Linguagens de Programação</H2>
 					<CardsBox>
 						<SkillCard Skill={"JavaScript"} IconImg={javascript} />
 						<SkillCard Skill={"TypeScript"} IconImg={typescript} />
@@ -77,7 +77,6 @@ const TituloBox = styled.div`
       white, 
       rgba(0, 0, 0, 0)
     ) 1 100%;
-
 `
 
 const H1 = styled.h1`

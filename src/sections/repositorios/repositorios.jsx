@@ -13,16 +13,13 @@ const Projetos = () => {
                 <BoxRepositorios>
                     <BoxCards>
                         <BoxCard>
-                            <Card>
-                            </Card>
+                            <Card />
                         </BoxCard>
                         <BoxCard>
-                            <Card>
-                            </Card>
+                            <Card />
                         </BoxCard>
                         <BoxCard>
-                            <Card>
-                            </Card>
+                            <Card />
                         </BoxCard>
                     </BoxCards>
                 </BoxRepositorios>
