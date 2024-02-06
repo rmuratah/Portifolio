@@ -4,7 +4,6 @@ import Card from "../../components/ui/components/card/card"
 
 const Projetos = () => {
 
-
     return (
         <Section color={'#141414'}>
             <ProjetosBox>
@@ -25,18 +24,6 @@ const Projetos = () => {
                             <Card>
                             </Card>
                         </BoxCard>
-                        {/* {CardList.map((card, index) => {
-                            return (
-                                <BoxCard key={index}>
-                                    <Card
-                                        index={index}
-                                        card={card}
-                                        isCardOpen={isCardOpen === card ? true : false}
-                                        setIsCardOpen={setIsCardOpen}
-                                    ></Card>
-                                </BoxCard>
-                            )
-                        })} */}
                     </BoxCards>
                 </BoxRepositorios>
             </ProjetosBox>
