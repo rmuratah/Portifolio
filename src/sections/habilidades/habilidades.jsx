@@ -7,7 +7,7 @@ import java from "../../assets/icons/java.png"
 import sql from "../../assets/icons/sql.png"
 import react from "../../assets/icons/react.png"
 import next from "../../assets/icons/nextjs.png"
-import springboot from "../../assets/icons/springboot.png"
+import nodejs from "../../assets/icons/nodejs.png"
 import mysql from "../../assets/icons/mysql.png"
 import git from "../../assets/icons/git.png"
 import aws from "../../assets/icons/aws.png"
@@ -38,7 +38,7 @@ const Habilidades = () => {
 						<SkillCard Skill={"React JS"} IconImg={react} />
 						<SkillCard Skill={"React Native"} IconImg={react} />
 						<SkillCard Skill={"Next JS"} IconImg={next} />
-						<SkillCard Skill={"SpringBoot"} IconImg={springboot} />
+						<SkillCard Skill={"Node Js"} IconImg={nodejs} />
 					</CardsBox>
 				</HabilidadeBox>
 				<HabilidadeBox>
@@ -47,7 +47,7 @@ const Habilidades = () => {
 						<SkillCard Skill={"Git"} IconImg={git} />
 						<SkillCard Skill={"MySQL"} IconImg={mysql} />
 						<SkillCard Skill={"Cloud AWS"} IconImg={aws} />
-						<SkillCard Skill={"Prisma"} IconImg={prisma} />
+						<SkillCard Skill={"Prisma Js"} IconImg={prisma} />
 					</CardsBox>
 				</HabilidadeBox>
 			</HabilidadesBox>

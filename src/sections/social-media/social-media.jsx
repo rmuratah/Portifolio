@@ -24,7 +24,7 @@ const SocialMedia = () => {
                                 onMouseEnter={() => { setHoverImg(Media); settextboxcolor(Media.HoverColor[0]) }}
                                 onMouseLeave={() => { setHoverImg(undefined); settextboxcolor('white') }}
                                 hovercolor={Media.HoverColor}>
-                                <A>
+                                <A href={Media.link} target="_blank" rel="noreferrer noopener">
                                     <Icon src={HoverImg === Media ? Media.Icon[1] : Media.Icon[0]} />{Media.SocialMedia}
                                 </A>
                             </LI>
