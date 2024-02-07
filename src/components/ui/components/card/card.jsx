@@ -55,11 +55,12 @@ const BoxBackGround = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-image: url("https://steamuserimages-a.akamaihd.net/ugc/2010328424759555731/7167A3ECE235D7D7E9CDD5E866E9C556F20C22BD/?imw=5000&imh=5000&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=false");
+    background-color: #0F2A43;
+    /* background-image: url("https://steamuserimages-a.akamaihd.net/ugc/2010328424759555731/7167A3ECE235D7D7E9CDD5E866E9C556F20C22BD/?imw=5000&imh=5000&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=false");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: left center;
-    object-fit: fill;
+    object-fit: fill; */
 `
 
 const BoxAbout = styled.div`

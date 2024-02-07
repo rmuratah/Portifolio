@@ -12,28 +12,32 @@ const MySocialMedia = [
         SocialMedia: 'Email',
         Icon: [EmailIcon, EmailWhiteIcon],
         HoverColor: ['#004f9f', '#003D7A', '#00478F'],
-        order: 4
+        order: 4,
+        link: "mailto:rafael.muratah@gmail.com"
     },
     {
         id: 2,
         SocialMedia: 'Linkedin',
         Icon: [LinkedinIcon, LinkedinIcon],
         HoverColor: ['#0e76a8', '#0B5E84', '#0C6B97'],
-        order: 3
+        order: 3,
+        link: "https://www.linkedin.com/in/rafael-murata-9760b1243/"
     },
     {
         id: 3,
         SocialMedia: 'GitHub',
         Icon: [GithubIcon, GithubWhiteIcon],
         HoverColor: ['#2dba4e', '#28A445', '#2CB54C'],
-        order: 2
+        order: 2,
+        link: "https://github.com/rmuratah"
     },
     {
         id: 4,
         SocialMedia: 'Instagram',
         Icon: [InstagramIcon, InstagramWhiteIcon],
         HoverColor: ['#E1306C', '#D61F5C', '#E02966'],
-        order: 1
+        order: 1,
+        link: "https://www.instagram.com/rmuratah/"
     },
 ]
 
