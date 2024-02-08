@@ -1,15 +1,14 @@
 import styled from "styled-components"
 
-const Card = ({ card }) => {
+const Card = ({ repo }) => {
 
   return (
-    <Box card={card}>
-      < BoxBackGround />
+    <Box>
+      < BoxBackGround image={repo.Image}/>
       <BoxAbout>
-        <H1>League Of Legends</H1>
+        <H1>{repo.Title}</H1>
         <p>
-          Lorem ipsum dolor sit amet. Est sunt libero est officiis animi ut veniam consectetur qui illo quaerat.
-          Id optio omnis id sint voluptas qui minus repellat et velit architecto qui facilis deserunt est voluptates voluptatem aut culpa earum!
+          {repo.Sobre}
         </p>
       </BoxAbout>
       <ShowMore>
@@ -25,7 +24,7 @@ export default Card
 
 const Box = styled.div`
     box-shadow: rgba(0, 0, 0, 0.2) 0px 60px 40px -7px;
-    display: flex;
+    display: grid;
     transition: width .5s;
     flex-direction: column;
     align-items: center;
@@ -35,6 +34,7 @@ const Box = styled.div`
     transition: width 2s;
     background-color: white;
     transition: all.2s;
+    grid-template-rows: 40% 35% 25%;
 
     &:hover{
       transform: translateY(-20px)    
@@ -49,18 +49,18 @@ const H1 = styled.h1`
 
 const BoxBackGround = styled.div`
     width: 100%;
-    height: 40%;
+    height: 100%;
 		overflow: hidden;
 		position: relative; 
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #0F2A43;
-    /* background-image: url("https://steamuserimages-a.akamaihd.net/ugc/2010328424759555731/7167A3ECE235D7D7E9CDD5E866E9C556F20C22BD/?imw=5000&imh=5000&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=false");
+    background-image: url(${props => props && props.image});
     background-repeat: no-repeat;
     background-size: cover;
     background-position: left center;
-    object-fit: fill; */
+    object-fit: fill;
+    border-bottom: 1px solid black;
 `
 
 const BoxAbout = styled.div`
@@ -70,17 +70,20 @@ const BoxAbout = styled.div`
   width: 85%;
   text-align: center;
   padding: 10px;
+  margin-left: auto;
+  margin-right: auto;
   `
 
 const ShowMore = styled.button`
     width: 50%;
     padding: 10px;
-    margin-top: 25px;
     cursor: pointer;
     border-radius: 5px;
     background-color: transparent;
     border: 1px solid black;
     position: relative;
+    margin-left: auto;
+    margin-right: auto;
 
     &::before{
       content: "";

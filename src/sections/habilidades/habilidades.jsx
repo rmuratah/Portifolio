@@ -98,7 +98,7 @@ const H2 = styled.h2`
 		content: "";
 		position: absolute;
 		bottom: -25px;
-		height: 4px;
+		height: 3px;
 		width: 50%;
 		left: 25%;
 		background-color: white;

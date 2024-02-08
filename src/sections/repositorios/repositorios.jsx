@@ -1,6 +1,7 @@
 import styled from "styled-components"
 import Section from "../../components/ui/components/section/section"
 import Card from "../../components/ui/components/card/card"
+import MeusRepositorios from "./meus-repositorios";
 
 const Projetos = () => {
 
@@ -12,15 +13,13 @@ const Projetos = () => {
                 </TituloBox>
                 <BoxRepositorios>
                     <BoxCards>
-                        <BoxCard>
-                            <Card />
-                        </BoxCard>
-                        <BoxCard>
-                            <Card />
-                        </BoxCard>
-                        <BoxCard>
-                            <Card />
-                        </BoxCard>
+                        {MeusRepositorios.map(repo => {
+                            return (
+                                <BoxCard>
+                                    <Card repo={repo} />
+                                </BoxCard>
+                            )
+                        })}
                     </BoxCards>
                 </BoxRepositorios>
             </ProjetosBox>

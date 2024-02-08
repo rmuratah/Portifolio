@@ -19,32 +19,34 @@ const sobreMim = () => {
 export default sobreMim
 
 const Box = styled.div`
-    display: grid;
+    display: flex;
     height: 100%;
-    grid-template-columns: 60% 40%;
+    align-items: center;
 `
 
 const TextBox = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: center;
+    width: 37.5%;
+    height: 40%;
+    margin-left: 20rem;
+    border-bottom: 1px solid white;
+    border-right: 1px solid white;
 `
 
 const H2 = styled.h2`
     color: white;
     font-size: 3.5rem;
-    margin-left: 20rem;
 `
 
 const H3 = styled.h3`
     color: white;
     font-size: 2.5rem;
-    margin-left: 20rem;
 `
 
 const P = styled.p`
     color: white;
     font-size: 2.5rem;
-    margin-left: 20rem;
     margin-top: 2.55rem;
 `
