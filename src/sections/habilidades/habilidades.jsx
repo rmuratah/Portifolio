@@ -92,6 +92,19 @@ const H2 = styled.h2`
 	font-size: 1.75rem;
 	text-align: center;
 	margin-top: 80px;
+	position: relative;
+
+	&::after{
+		content: "";
+		position: absolute;
+		bottom: -25px;
+		height: 4px;
+		width: 50%;
+		left: 25%;
+		background-color: white;
+		margin-left: auto;
+		margin-right: auto;
+	}
 `
 
 const HabilidadeBox = styled.div`
@@ -115,5 +128,5 @@ const CardsBox = styled.div`
 	display: grid;
 	grid-template-columns: 50% 50%;
 	grid-template-rows: 50% 50%;
-	margin-top: 2rem;
+	margin-top: 3rem;
 `
