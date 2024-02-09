@@ -14,7 +14,7 @@ const MeusRepositorios = [
     {
         id: 3,
         Title: 'Sigma Case',
-        Sobre: "Projeto resolvendo um Case da empresa Sigma",
+        Sobre: "Projeto resolvendo um Case da empresa Sigma Software",
         Image: "https://www.onlinecasinoreports.com/images/sigmasoftware.jpg"
     },
 ]
