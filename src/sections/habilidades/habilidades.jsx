@@ -107,11 +107,13 @@ const HabilidadeBox = styled.div`
 
 const CardsBox = styled.div`
 	width: 85%;
-	height: 50%;
 	display: grid;
-	grid-template-columns: 50% 50%;
-	grid-template-rows: 50% 50%;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 1fr 1fr;
+	gap: 30px;
 	margin-top: 3rem;
 	align-items: center;
 	justify-items: center;
+	max-height: 50%;
+	overflow: auto;
 `
