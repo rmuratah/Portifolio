@@ -1,19 +1,11 @@
+import styled from "styled-components"
+
 import Section from "../../components/ui/components/section/section"
 import SkillCard from "../../components/ui/components/skill-card/skill-card"
 
-import javascript from "../../assets/icons/javascript.png"
-import typescript from "../../assets/icons/typsecript.png"
-import java from "../../assets/icons/java.png"
-import sql from "../../assets/icons/sql.png"
-import react from "../../assets/icons/react.png"
-import next from "../../assets/icons/nextjs.png"
-import nodejs from "../../assets/icons/nodejs.png"
-import mysql from "../../assets/icons/mysql.png"
-import git from "../../assets/icons/git.png"
-import aws from "../../assets/icons/aws.png"
-import prisma from "../../assets/icons/prisma.png"
-
-import styled from "styled-components"
+import MinhasLinguagensDeProgramacao from "./minhas-linguagens-de-programacao";
+import MinhasTecnologias from "./minhas-tecnologias";
+import MeusFrameWorks from "./meus-frameworks";
 
 const Habilidades = () => {
 
@@ -26,28 +18,19 @@ const Habilidades = () => {
 				<HabilidadeBox>
 					<H2>Linguagens de Programação</H2>
 					<CardsBox>
-						<SkillCard Skill={"JavaScript"} IconImg={javascript} />
-						<SkillCard Skill={"TypeScript"} IconImg={typescript} />
-						<SkillCard Skill={"Java"} IconImg={java} />
-						<SkillCard Skill={"SQL"} IconImg={sql} />
+						{MinhasLinguagensDeProgramacao.map(Linguagem => <SkillCard key={Linguagem.id} Skill={Linguagem.Linguagem} IconImg={Linguagem.Image} />)}
 					</CardsBox>
 				</HabilidadeBox>
 				<HabilidadeBox>
 					<H2>Libraries & Frameworks</H2>
 					<CardsBox>
-						<SkillCard Skill={"React JS"} IconImg={react} />
-						<SkillCard Skill={"React Native"} IconImg={react} />
-						<SkillCard Skill={"Next JS"} IconImg={next} />
-						<SkillCard Skill={"Node Js"} IconImg={nodejs} />
+						{MeusFrameWorks.map(FrameWork => <SkillCard key={FrameWork.id} Skill={FrameWork.FrameWork} IconImg={FrameWork.Image} />)}
 					</CardsBox>
 				</HabilidadeBox>
 				<HabilidadeBox>
 					<H2>Outras tecnologias</H2>
 					<CardsBox>
-						<SkillCard Skill={"Git"} IconImg={git} />
-						<SkillCard Skill={"MySQL"} IconImg={mysql} />
-						<SkillCard Skill={"Cloud AWS"} IconImg={aws} />
-						<SkillCard Skill={"Prisma Js"} IconImg={prisma} />
+						{MinhasTecnologias.map(Tecnologia => <SkillCard key={Tecnologia.id} Skill={Tecnologia.Tecnologia} IconImg={Tecnologia.Image} />)}
 					</CardsBox>
 				</HabilidadeBox>
 			</HabilidadesBox>
@@ -124,9 +107,13 @@ const HabilidadeBox = styled.div`
 
 const CardsBox = styled.div`
 	width: 85%;
-	height: 50%;
 	display: grid;
-	grid-template-columns: 50% 50%;
-	grid-template-rows: 50% 50%;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 1fr 1fr;
+	gap: 30px;
 	margin-top: 3rem;
+	align-items: center;
+	justify-items: center;
+	max-height: 50%;
+	overflow: auto;
 `

@@ -13,7 +13,7 @@ const SocialMedia = () => {
         <Section color={'#141414'}>
             <SectionBox>
                 <TextBox>
-                    {redes.map(letra => <P textboxcolor={textboxcolor}>{letra}</P>)}
+                    {redes.map((letra, index) => <P key={index} textboxcolor={textboxcolor}>{letra}</P>)}
                 </TextBox>
                 <ButtonBox>
                     <UL>

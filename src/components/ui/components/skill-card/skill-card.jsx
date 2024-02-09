@@ -18,9 +18,7 @@ const Box = styled(Tilt)`
     width: 150px;
     height: 150px;
     border: 1px solid white;
-    margin: 1.5rem;
-    margin-left: auto;
-    margin-right: auto;
+    /* margin: 1.5rem; */
     cursor: pointer;
     display: flex;
     color: white;
@@ -29,8 +27,9 @@ const Box = styled(Tilt)`
 `
 
 const Icon = styled.img`
-    width: 80%;
-    height: 80%;
+    width: 75%;
+    height: 75%;
+    margin: 5px;
 `
 
 const P = styled.p`

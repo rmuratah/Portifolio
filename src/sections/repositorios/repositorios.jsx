@@ -15,7 +15,7 @@ const Projetos = () => {
                     <BoxCards>
                         {MeusRepositorios.map(repo => {
                             return (
-                                <BoxCard>
+                                <BoxCard key={repo.id}>
                                     <Card repo={repo} />
                                 </BoxCard>
                             )
