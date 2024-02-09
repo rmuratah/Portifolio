@@ -116,4 +116,15 @@ const CardsBox = styled.div`
 	justify-items: center;
 	max-height: 50%;
 	overflow: auto;
+
+	&::-webkit-scrollbar{
+		background-color: #B8B8B8;
+		width: 8px;
+		border-radius: 5px;
+	}
+
+	&::-webkit-scrollbar-thumb {
+    	background: #3D3D3D;
+		border-radius: 5px;
+	}
 `
