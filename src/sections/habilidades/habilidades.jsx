@@ -18,19 +18,19 @@ const Habilidades = () => {
 				<HabilidadeBox>
 					<H2>Linguagens de Programação</H2>
 					<CardsBox>
-						{MinhasLinguagensDeProgramacao.map(Linguagem => <SkillCard Skill={Linguagem.Linguagem} IconImg={Linguagem.Image} />)}
+						{MinhasLinguagensDeProgramacao.map(Linguagem => <SkillCard key={Linguagem.id} Skill={Linguagem.Linguagem} IconImg={Linguagem.Image} />)}
 					</CardsBox>
 				</HabilidadeBox>
 				<HabilidadeBox>
 					<H2>Libraries & Frameworks</H2>
 					<CardsBox>
-						{MeusFrameWorks.map(FrameWork => <SkillCard Skill={FrameWork.FrameWork} IconImg={FrameWork.Image} />)}
+						{MeusFrameWorks.map(FrameWork => <SkillCard key={FrameWork.id} Skill={FrameWork.FrameWork} IconImg={FrameWork.Image} />)}
 					</CardsBox>
 				</HabilidadeBox>
 				<HabilidadeBox>
 					<H2>Outras tecnologias</H2>
 					<CardsBox>
-						{MinhasTecnologias.map(Tecnologia => <SkillCard Skill={Tecnologia.Tecnologia} IconImg={Tecnologia.Image} />)}
+						{MinhasTecnologias.map(Tecnologia => <SkillCard key={Tecnologia.id} Skill={Tecnologia.Tecnologia} IconImg={Tecnologia.Image} />)}
 					</CardsBox>
 				</HabilidadeBox>
 			</HabilidadesBox>
@@ -112,4 +112,6 @@ const CardsBox = styled.div`
 	grid-template-columns: 50% 50%;
 	grid-template-rows: 50% 50%;
 	margin-top: 3rem;
+	align-items: center;
+	justify-items: center;
 `
