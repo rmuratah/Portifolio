@@ -1,37 +1,49 @@
-import styled from "styled-components"
-import Tilt from "react-vanilla-tilt"
+import styled from "styled-components";
+import Tilt from "react-vanilla-tilt";
+import { useState } from "react";
+import MostrarMais from "./mostrar-mais";
 
-const skillCard = ({ Skill, IconImg }) => {
-    return (
-        <Box style={{}} options={{ scale: 2, max: 25 }}>
-            <Icon src={IconImg} />
-            <P>
-                {Skill}
-            </P>
-        </Box>
-    )
-}
+const SkillCard = ({ Skill, IconImg }) => {
+  const [mostrarMais, setMostrarMais] = useState(null);
 
-export default skillCard
+  return (
+    <>
+      <Box
+        style={{}}
+        options={{ scale: 2, max: 25 }}
+        onClick={() => setMostrarMais(Skill)}
+      >
+        <Icon src={IconImg} />
+        <P>{Skill}</P>
+      </Box>
+      {mostrarMais !== null && <MostrarMais Skill={Skill} setMostrarMais={setMostrarMais}/>}
+    </>
+  );
+};
+
+export default SkillCard;
 
 const Box = styled(Tilt)`
-    width: 150px;
-    height: 150px;
+  width: 150px;
+  height: 150px;
+  /* margin: 1.5rem; */
+  cursor: pointer;
+  display: flex;
+  color: white;
+  align-items: center;
+  flex-direction: column;
+
+  &:hover {
     border: 1px solid white;
-    /* margin: 1.5rem; */
-    cursor: pointer;
-    display: flex;
-    color: white;
-    align-items: center;
-    flex-direction: column;
-`
+  }
+`;
 
 const Icon = styled.img`
-    width: 75%;
-    height: 75%;
-    margin: 5px;
-`
+  width: 75%;
+  height: 75%;
+  margin: 5px;
+`;
 
 const P = styled.p`
-    margin-top: 5px;
-`
+  margin-top: 5px;
+`;
