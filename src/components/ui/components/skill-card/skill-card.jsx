@@ -1,16 +1,27 @@
 import styled from "styled-components";
 import Tilt from "react-vanilla-tilt";
+import { useState } from "react";
+import MostrarMais from "./mostrar-mais";
 
-const skillCard = ({ Skill, IconImg }) => {
+const SkillCard = ({ Skill, IconImg }) => {
+  const [mostrarMais, setMostrarMais] = useState(null);
+
   return (
-    <Box style={{}} options={{ scale: 2, max: 25 }}>
-      <Icon src={IconImg} />
-      <P>{Skill}</P>
-    </Box>
+    <>
+      <Box
+        style={{}}
+        options={{ scale: 2, max: 25 }}
+        onClick={() => setMostrarMais(Skill)}
+      >
+        <Icon src={IconImg} />
+        <P>{Skill}</P>
+      </Box>
+      {mostrarMais !== null && <MostrarMais Skill={Skill} setMostrarMais={setMostrarMais}/>}
+    </>
   );
 };
 
-export default skillCard;
+export default SkillCard;
 
 const Box = styled(Tilt)`
   width: 150px;

@@ -135,18 +135,3 @@ const CardsBox = styled.div`
     border-radius: 5px;
   }
 `;
-
-const MostrarMaisBtn = styled.button`
-	margin-top: 25px;
-	padding: 15px;
-	background-color: transparent;
-	color: white;
-	border-color: white;
-	cursor: pointer;
-  	transition: all.5s;
-
-	&:hover{
-		background-color: white;
-		color: black;
-	}
-`
