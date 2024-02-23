@@ -62,6 +62,7 @@ const HabilidadesBox = styled.div`
   align-items: center;
   height: 100%;
   grid-template-columns: 20% 25% 25% 25%;
+  filter: brightness(50%);
 `;
 
 const TituloBox = styled.div`
