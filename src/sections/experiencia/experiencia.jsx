@@ -1,12 +1,7 @@
-import Section from "../../components/ui/components/section/section"
+import Section from "../../components/ui/components/section/section";
 
 const experiencia = () => {
+  return <Section></Section>;
+};
 
-    return (
-        <Section color={"#141414"}>
-
-        </Section>
-    )
-}
-
-export default experiencia
+export default experiencia;

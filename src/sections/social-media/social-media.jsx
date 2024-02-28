@@ -8,7 +8,7 @@ const SocialMedia = () => {
   const [textboxcolor, settextboxcolor] = useState("white");
 
   return (
-    <Section color={"#141414"}>
+    <Section>
       <SectionBox>
         <TextBox>
           <P textboxcolor={textboxcolor}>Redes Sociais</P>
@@ -88,10 +88,6 @@ const P = styled.p`
   @media (max-width: 950px) {
     font-size: 2.5rem;
   }
-
-  /* @media (max-width: 600px) {
-    margin-top: 10vh
-  } */
 `;
 
 const ButtonBox = styled.div`
@@ -118,6 +114,10 @@ const LI = styled.li`
 
   @media (max-width: 950px) {
     width: 200px;
+  }
+
+  @media (max-width: 600px) {
+    margin-left: 35px;
   }
 
   &:hover {

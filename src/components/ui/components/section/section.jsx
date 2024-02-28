@@ -1,15 +1,10 @@
-const Section = ({ color, ...props }) => {
+const Section = ({ ...props }) => {
+  const style = {
+    backgroundColor: "#141414",
+    height: "100vh",
+  };
 
-    const style = {
-        backgroundColor: `${color}`,
-        height: '100vh',
-    };
-
-    return (
-        <section style={style}>
-            {props.children}
-        </section>
-    );
-}
+  return <section style={style}>{props.children}</section>;
+};
 
 export default Section;

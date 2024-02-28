@@ -9,7 +9,7 @@ import MeusFrameWorks from "./meus-frameworks";
 
 const Habilidades = () => {
   return (
-    <Section color={"#141414"}>
+    <Section>
       <HabilidadesBox>
         <TituloBox>
           <H1>Habilidades</H1>
