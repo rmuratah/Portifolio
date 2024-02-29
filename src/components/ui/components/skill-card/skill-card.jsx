@@ -21,13 +21,17 @@ const SkillCard = ({ Skill, IconImg }) => {
 export default SkillCard;
 
 const Box = styled(Tilt)`
-  width: 150px;
-  height: 150px;
+  width: 100px;
+  height: 100px;
   cursor: pointer;
   display: flex;
   color: white;
   align-items: center;
   flex-direction: column;
+  border: 1px solid transparent;
+  transition: 0.75s;
+  justify-content: center;
+  margin-top: 20px;
 
   @media (max-width: 1000px) {
     width: 75px;
@@ -40,14 +44,14 @@ const Box = styled(Tilt)`
 `;
 
 const Icon = styled.img`
-  width: 75%;
-  height: 75%;
-  margin: 5px;
+  width: 60px;
+  height: 60px;
 `;
 
 const P = styled.p`
   margin-top: 5px;
+  font-size: 0.75rem;
   @media (max-width: 1000px) {
-    font-size: 0.75rem;
+    font-size: 0.5rem;
   }
 `;

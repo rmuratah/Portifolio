@@ -73,7 +73,7 @@ const HabilidadesBox = styled.div`
   align-items: center;
   height: 100%;
   grid-template-columns: 20% 25% 25% 25%;
-  filter: brightness(50%);
+  /* filter: brightness(50%); */
 `;
 
 const TituloBox = styled.div`
@@ -121,6 +121,7 @@ const HabilidadeBox = styled.div`
   border-right: 1px solid white;
   border-bottom: 1px solid;
   height: 80%;
+  width: 90%;
   flex-direction: column;
   border-image: linear-gradient(to bottom, white, rgba(0, 0, 0, 0)) 1 100%;
   animation: ${fadeight} 1.5s;
@@ -131,7 +132,6 @@ const CardsBox = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
-  gap: 30px;
   margin-top: 3rem;
   align-items: center;
   justify-items: center;
@@ -140,7 +140,7 @@ const CardsBox = styled.div`
 
   &::-webkit-scrollbar {
     background-color: #b8b8b8;
-    width: 8px;
+    width: 6px;
     border-radius: 5px;
   }
 
