@@ -41,19 +41,35 @@ const TextBox = styled.div`
   justify-content: center;
   width: 80%;
   height: 40%;
-  margin-top: 20vh;
+  margin-top: 15vh;
+
+  @media (max-width: 800px) {
+    width: 90%;
+  }
 `;
 
 const H2 = styled.h2`
   color: white;
   font-size: 4.5rem;
   animation: ${fadeDown1} 1s;
+  @media (max-width: 1200px) {
+    font-size: 3.5rem;
+  }
+  @media (max-width: 500px) {
+    font-size: 3rem;
+  }
 `;
 
 const H3 = styled.h3`
   color: white;
   font-size: 3.5rem;
   animation: ${fadeDown1} 1.25s;
+  @media (max-width: 1200px) {
+    font-size: 2.5rem;
+  }
+  @media (max-width: 500px) {
+    font-size: 2rem;
+  }
 `;
 
 const P = styled.p`
@@ -61,4 +77,10 @@ const P = styled.p`
   font-size: 3.5rem;
   margin-top: 2.55rem;
   animation: ${fadeDown1} 1.5s;
+  @media (max-width: 1200px) {
+    font-size: 2.5rem;
+  }
+  @media (max-width: 500px) {
+    font-size: 2rem;
+  }
 `;
