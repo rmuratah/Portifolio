@@ -7,17 +7,14 @@ const SkillCard = ({ Skill, IconImg }) => {
   const [mostrarMais, setMostrarMais] = useState(null);
 
   return (
-    <>
-      <Box
-        style={{}}
-        options={{ scale: 2, max: 25 }}
-        onClick={() => setMostrarMais(Skill)}
-      >
-        <Icon src={IconImg} />
-        <P>{Skill}</P>
-      </Box>
-      {mostrarMais !== null && <MostrarMais Skill={Skill} setMostrarMais={setMostrarMais}/>}
-    </>
+    <Box
+      style={{}}
+      options={{ scale: 2, max: 25 }}
+      onClick={() => setMostrarMais(Skill)}
+    >
+      <Icon src={IconImg} />
+      <P>{Skill}</P>
+    </Box>
   );
 };
 
@@ -26,12 +23,16 @@ export default SkillCard;
 const Box = styled(Tilt)`
   width: 150px;
   height: 150px;
-  /* margin: 1.5rem; */
   cursor: pointer;
   display: flex;
   color: white;
   align-items: center;
   flex-direction: column;
+
+  @media (max-width: 1000px) {
+    width: 75px;
+    height: 75px;
+  }
 
   &:hover {
     border: 1px solid white;
@@ -46,4 +47,7 @@ const Icon = styled.img`
 
 const P = styled.p`
   margin-top: 5px;
+  @media (max-width: 1000px) {
+    font-size: 0.75rem;
+  }
 `;

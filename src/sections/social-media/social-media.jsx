@@ -78,10 +78,6 @@ const P = styled.p`
   cursor: pointer;
   text-align: center;
 
-  &:hover {
-    transform: translateY(-30px);
-  }
-
   @media (max-width: 1280px) {
     font-size: 3.5rem;
   }
