@@ -6,11 +6,16 @@ import SkillCard from "../../components/ui/components/skill-card/skill-card";
 import MinhasLinguagensDeProgramacao from "./minhas-linguagens-de-programacao";
 import MinhasTecnologias from "./minhas-tecnologias";
 import MeusFrameWorks from "./meus-frameworks";
+import PopUp from "../../components/ui/components/pop-up/pop-up";
+
+import { useState } from "react";
 
 const Habilidades = () => {
+  const [popup, setPopup] = useState();
+
   return (
     <Section>
-      <HabilidadesBox>
+      <HabilidadesBox popup={popup}>
         <TituloBox>
           <H1>Habilidades</H1>
         </TituloBox>
@@ -19,6 +24,7 @@ const Habilidades = () => {
           <CardsBox>
             {MinhasLinguagensDeProgramacao.map((Linguagem) => (
               <SkillCard
+                setPopup={setPopup}
                 key={Linguagem.id}
                 Skill={Linguagem.Linguagem}
                 IconImg={Linguagem.Image}
@@ -31,6 +37,7 @@ const Habilidades = () => {
           <CardsBox>
             {MeusFrameWorks.map((FrameWork) => (
               <SkillCard
+                setPopup={setPopup}
                 key={FrameWork.id}
                 Skill={FrameWork.FrameWork}
                 IconImg={FrameWork.Image}
@@ -43,6 +50,7 @@ const Habilidades = () => {
           <CardsBox>
             {MinhasTecnologias.map((Tecnologia) => (
               <SkillCard
+                setPopup={setPopup}
                 key={Tecnologia.id}
                 Skill={Tecnologia.Tecnologia}
                 IconImg={Tecnologia.Image}
@@ -50,6 +58,7 @@ const Habilidades = () => {
             ))}
           </CardsBox>
         </HabilidadeBox>
+        <PopUp popup={popup} setPopup={setPopup} />
       </HabilidadesBox>
     </Section>
   );
@@ -73,7 +82,11 @@ const HabilidadesBox = styled.div`
   align-items: center;
   height: 100%;
   grid-template-columns: 20% 25% 25% 25%;
-  /* filter: brightness(50%); */
+  position: relative;
+  filter: ${(props) =>
+    props.popup !== null && props.popup !== undefined
+      ? "brightness(50%)"
+      : undefined};
 `;
 
 const TituloBox = styled.div`

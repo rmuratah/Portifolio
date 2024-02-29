@@ -45,7 +45,7 @@ const MeusFrameWork = [
     },
     {
         id: 8,
-        FrameWork: 'Styled-Components',
+        FrameWork: 'StyledComponents',
         Image: styledcomponents
     },
     {
