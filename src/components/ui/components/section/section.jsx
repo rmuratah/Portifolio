@@ -1,10 +1,20 @@
-const Section = ({ ...props }) => {
+import { styled } from "styled-components";
+
+const Section = ({ image, ...props }) => {
   const style = {
-    backgroundColor: "#141414",
-    height: "100vh",
+    backgroundImage: `url(${image})`,
   };
 
-  return <section style={style}>{props.children}</section>;
+  return <CustomSection image={image}>{props.children}</CustomSection>;
 };
 
 export default Section;
+
+const CustomSection = styled.section`
+  height: 100vh;
+  background-color: #141414;
+  background-image: ${(props) => props && `url(${props.image})`};
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center
+`;

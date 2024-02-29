@@ -1,9 +1,10 @@
 import styled from "styled-components";
 import Section from "../../components/ui/components/section/section";
+import background from '../../assets/images/background.jpg'
 
 const sobreMim = () => {
   return (
-    <Section >
+    <Section image={background}>
       <Box>
         <TextBox>
           <H3>Rafael Murata</H3>
@@ -20,7 +21,6 @@ export default sobreMim;
 const Box = styled.div`
   display: flex;
   height: 100%;
-  align-items: center;
   justify-content: center;
 `;
 
@@ -30,6 +30,7 @@ const TextBox = styled.div`
   justify-content: center;
   width: 80%;
   height: 40%;
+  margin-top: 20vh;
 `;
 
 const H2 = styled.h2`
