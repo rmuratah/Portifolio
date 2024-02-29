@@ -29,6 +29,17 @@ const fadeDown1 = keyframes`
   }
 `;
 
+const fadeDown2 = keyframes`
+  from{
+    opacity: 0;
+    transform: translateY(-100px);
+  }
+  to{
+    opacity: 1;
+    transform: translateY(0px);
+  }
+`;
+
 const Box = styled.div`
   display: flex;
   height: 100%;
@@ -51,7 +62,7 @@ const TextBox = styled.div`
 const H2 = styled.h2`
   color: white;
   font-size: 4.5rem;
-  animation: ${fadeDown1} 1s;
+  animation: ${fadeDown2} 1s;
   @media (max-width: 1200px) {
     font-size: 3.5rem;
   }
@@ -76,7 +87,7 @@ const P = styled.p`
   color: white;
   font-size: 3.5rem;
   margin-top: 2.55rem;
-  animation: ${fadeDown1} 1.5s;
+  animation: ${fadeDown2} 2s;
   @media (max-width: 1200px) {
     font-size: 2.5rem;
   }

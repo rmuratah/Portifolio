@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 
 import Section from "../../components/ui/components/section/section";
 import SkillCard from "../../components/ui/components/skill-card/skill-card";
@@ -57,6 +57,17 @@ const Habilidades = () => {
 
 export default Habilidades;
 
+const fadeight = keyframes`
+  from{
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to{
+    opacity: 1;
+    transform: translateX(0px);
+  }
+`;
+
 const HabilidadesBox = styled.div`
   display: grid;
   align-items: center;
@@ -73,6 +84,7 @@ const TituloBox = styled.div`
   height: 80%;
   border-right: 1px solid white;
   border-image: linear-gradient(to bottom, white, rgba(0, 0, 0, 0)) 1 100%;
+  animation: ${fadeight} 1s;
 `;
 
 const H1 = styled.h1`
@@ -111,6 +123,7 @@ const HabilidadeBox = styled.div`
   height: 80%;
   flex-direction: column;
   border-image: linear-gradient(to bottom, white, rgba(0, 0, 0, 0)) 1 100%;
+  animation: ${fadeight} 1.5s;
 `;
 
 const CardsBox = styled.div`
