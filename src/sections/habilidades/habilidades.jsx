@@ -9,7 +9,7 @@ import MeusFrameWorks from "./meus-frameworks";
 
 const Habilidades = () => {
   return (
-    <Section color={"#141414"}>
+    <Section>
       <HabilidadesBox>
         <TituloBox>
           <H1>Habilidades</H1>
@@ -62,6 +62,7 @@ const HabilidadesBox = styled.div`
   align-items: center;
   height: 100%;
   grid-template-columns: 20% 25% 25% 25%;
+  filter: brightness(50%);
 `;
 
 const TituloBox = styled.div`

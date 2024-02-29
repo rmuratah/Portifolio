@@ -3,7 +3,7 @@ import { styled } from "styled-components";
 const MostrarMais = ({ Skill, setMostrarMais }) => {
   return (
     <Box>
-      <H1>{Skill.id}</H1>
+      <H1>{Skill}</H1>
       <Button onClick={() => setMostrarMais(null)}>Fechar</Button>
     </Box>
   );
@@ -17,10 +17,10 @@ const Box = styled.div`
   height: 300px;
   position: absolute;
   border: 1px solid white;
+  background-color: white;
 `;
 
 const H1 = styled.h1`
-  color: red;
   font-size: 2rem;
 `;
 
