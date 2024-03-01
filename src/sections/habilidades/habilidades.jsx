@@ -7,6 +7,7 @@ import MinhasLinguagensDeProgramacao from "./minhas-linguagens-de-programacao";
 import MinhasTecnologias from "./minhas-tecnologias";
 import MeusFrameWorks from "./meus-frameworks";
 import PopUp from "../../components/ui/components/pop-up/pop-up";
+import ArrowRight from "../../assets/icons/right-arrow.png";
 
 import { useState } from "react";
 
@@ -16,6 +17,9 @@ const Habilidades = () => {
   return (
     <Section>
       <HabilidadesBox popup={popup}>
+        <AbrirBtn>
+          <img src={ArrowRight} style={{width: '50px', height: '50px'}} />
+        </AbrirBtn>
         <TituloBox>
           <H1>Habilidades</H1>
         </TituloBox>
@@ -160,4 +164,17 @@ const CardsBox = styled.div`
     background: #3d3d3d;
     border-radius: 5px;
   }
+`;
+
+const AbrirBtn = styled.button`
+  width: 80px;
+  height: 80px;
+  position: absolute;
+  margin-left: 100px;
+  border-radius: 50%;
+  border: 1px solid white;
+  background-color: transparent;
+  color: white;
+  font-size: 2rem;
+  cursor: pointer;
 `;
