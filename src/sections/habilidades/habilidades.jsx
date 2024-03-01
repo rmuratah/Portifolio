@@ -66,7 +66,7 @@ const Habilidades = () => {
 
 export default Habilidades;
 
-const fadeight = keyframes`
+const faderight = keyframes`
   from{
     opacity: 0;
     transform: translateX(-30px);
@@ -82,11 +82,10 @@ const HabilidadesBox = styled.div`
   align-items: center;
   height: 100%;
   grid-template-columns: 20% 25% 25% 25%;
-  position: relative;
-  filter: ${(props) =>
+  /* filter: ${(props) =>
     props.popup !== null && props.popup !== undefined
       ? "brightness(50%)"
-      : undefined};
+      : undefined}; */
 `;
 
 const TituloBox = styled.div`
@@ -97,7 +96,7 @@ const TituloBox = styled.div`
   height: 80%;
   border-right: 1px solid white;
   border-image: linear-gradient(to bottom, white, rgba(0, 0, 0, 0)) 1 100%;
-  animation: ${fadeight} 1s;
+  animation: ${faderight} 1s;
 `;
 
 const H1 = styled.h1`
@@ -137,7 +136,7 @@ const HabilidadeBox = styled.div`
   width: 90%;
   flex-direction: column;
   border-image: linear-gradient(to bottom, white, rgba(0, 0, 0, 0)) 1 100%;
-  animation: ${fadeight} 1.5s;
+  animation: ${faderight} 1.5s;
 `;
 
 const CardsBox = styled.div`
