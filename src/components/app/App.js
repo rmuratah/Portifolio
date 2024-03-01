@@ -11,7 +11,7 @@ function App() {
       <Header />
       <SobreMim />
       <Habilidades />
-      <Repositorios />
+      {/* <Repositorios /> */}
       <SocialMedia />
     </div>
   );

@@ -1,37 +1,53 @@
-import styled from "styled-components"
-import Tilt from "react-vanilla-tilt"
+import styled from "styled-components";
+import Tilt from "react-vanilla-tilt";
 
-const skillCard = ({ Skill, IconImg }) => {
-    return (
-        <Box style={{}} options={{ scale: 2, max: 25 }}>
-            <Icon src={IconImg} />
-            <P>
-                {Skill}
-            </P>
-        </Box>
-    )
-}
+const SkillCard = ({ Skill, IconImg, setPopup }) => {
+  return (
+    <Box
+      style={{}}
+      options={{ scale: 2, max: 25 }}
+      onClick={() => setPopup(Skill)}
+    >
+      <Icon src={IconImg} />
+      <P>{Skill}</P>
+    </Box>
+  );
+};
 
-export default skillCard
+export default SkillCard;
 
 const Box = styled(Tilt)`
-    width: 150px;
-    height: 150px;
+  width: 100px;
+  height: 100px;
+  cursor: pointer;
+  display: flex;
+  color: white;
+  align-items: center;
+  flex-direction: column;
+  border: 1px solid transparent;
+  transition: 0.75s;
+  justify-content: center;
+  margin-top: 20px;
+
+  @media (max-width: 1000px) {
+    width: 75px;
+    height: 75px;
+  }
+
+  &:hover {
     border: 1px solid white;
-    /* margin: 1.5rem; */
-    cursor: pointer;
-    display: flex;
-    color: white;
-    align-items: center;
-    flex-direction: column;
-`
+  }
+`;
 
 const Icon = styled.img`
-    width: 75%;
-    height: 75%;
-    margin: 5px;
-`
+  width: 60px;
+  height: 60px;
+`;
 
 const P = styled.p`
-    margin-top: 5px;
-`
+  margin-top: 5px;
+  font-size: 0.75rem;
+  @media (max-width: 1000px) {
+    font-size: 0.5rem;
+  }
+`;
