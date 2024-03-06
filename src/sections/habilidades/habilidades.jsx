@@ -7,15 +7,23 @@ import MinhasLinguagensDeProgramacao from "./minhas-linguagens-de-programacao";
 import MinhasTecnologias from "./minhas-tecnologias";
 import MeusFrameWorks from "./meus-frameworks";
 import PopUp from "../../components/ui/components/pop-up/pop-up";
+import ArrowRight from "../../assets/icons/right-arrow.png";
 
 import { useState } from "react";
 
 const Habilidades = () => {
   const [popup, setPopup] = useState();
+  const [open, setOpen] = useState(false);
+  console.log(open);
 
   return (
     <Section>
-      <HabilidadesBox popup={popup}>
+      {!open && (
+        <AbrirBtn onClick={() => setOpen(true)}>
+          <AbrirImg src={ArrowRight} alt='AbrirBtn' />
+        </AbrirBtn>
+      )}
+      <HabilidadesBox popup={popup} open={open}>
         <TituloBox>
           <H1>Habilidades</H1>
         </TituloBox>
@@ -78,7 +86,7 @@ const faderight = keyframes`
 `;
 
 const HabilidadesBox = styled.div`
-  display: grid;
+  display: ${(props) => (props.open === true ? "grid" : "none")};
   align-items: center;
   height: 100%;
   grid-template-columns: 20% 25% 25% 25%;
@@ -160,4 +168,27 @@ const CardsBox = styled.div`
     background: #3d3d3d;
     border-radius: 5px;
   }
+`;
+
+const AbrirBtn = styled.button`
+  width: 80px;
+  height: 80px;
+  position: absolute;
+  margin-left: 100px;
+  border-radius: 50%;
+  border: 1px solid white;
+  background-color: transparent;
+  color: white;
+  font-size: 2rem;
+  cursor: pointer;
+  top: 45%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
+
+const AbrirImg = styled.img`
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
 `;

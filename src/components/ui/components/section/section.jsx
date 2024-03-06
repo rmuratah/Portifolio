@@ -16,5 +16,6 @@ const CustomSection = styled.section`
   background-image: ${(props) => props && `url(${props.image})`};
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center
+  background-position: center;
+  position: relative;
 `;
