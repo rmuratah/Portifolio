@@ -13,13 +13,17 @@ import { useState } from "react";
 
 const Habilidades = () => {
   const [popup, setPopup] = useState();
+  const [open, setOpen] = useState(false);
+  console.log(open);
 
   return (
     <Section>
-      <HabilidadesBox popup={popup}>
-        <AbrirBtn>
-          <img src={ArrowRight} style={{width: '50px', height: '50px'}} />
+      {!open && (
+        <AbrirBtn onClick={() => setOpen(true)}>
+          <AbrirImg src={ArrowRight} alt='AbrirBtn' />
         </AbrirBtn>
+      )}
+      <HabilidadesBox popup={popup} open={open}>
         <TituloBox>
           <H1>Habilidades</H1>
         </TituloBox>
@@ -82,7 +86,7 @@ const faderight = keyframes`
 `;
 
 const HabilidadesBox = styled.div`
-  display: grid;
+  display: ${(props) => (props.open === true ? "grid" : "none")};
   align-items: center;
   height: 100%;
   grid-template-columns: 20% 25% 25% 25%;
@@ -177,4 +181,14 @@ const AbrirBtn = styled.button`
   color: white;
   font-size: 2rem;
   cursor: pointer;
+  top: 45%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
+
+const AbrirImg = styled.img`
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
 `;
