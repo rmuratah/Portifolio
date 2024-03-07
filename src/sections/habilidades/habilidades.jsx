@@ -14,15 +14,15 @@ import { useState } from "react";
 const Habilidades = () => {
   const [popup, setPopup] = useState();
   const [open, setOpen] = useState(false);
-  console.log(open);
 
   return (
     <Section>
       {!open && (
         <AbrirBtn onClick={() => setOpen(true)}>
-          <AbrirImg src={ArrowRight} alt='AbrirBtn' />
+          <AbrirImg src={ArrowRight} alt="AbrirBtn" />
         </AbrirBtn>
       )}
+      <PopUp popup={popup} setPopup={setPopup} />
       <HabilidadesBox popup={popup} open={open}>
         <TituloBox>
           <H1>Habilidades</H1>
@@ -66,7 +66,6 @@ const Habilidades = () => {
             ))}
           </CardsBox>
         </HabilidadeBox>
-        <PopUp popup={popup} setPopup={setPopup} />
       </HabilidadesBox>
     </Section>
   );
@@ -90,10 +89,10 @@ const HabilidadesBox = styled.div`
   align-items: center;
   height: 100%;
   grid-template-columns: 20% 25% 25% 25%;
-  /* filter: ${(props) =>
+  filter: ${(props) =>
     props.popup !== null && props.popup !== undefined
       ? "brightness(50%)"
-      : undefined}; */
+      : undefined};
 `;
 
 const TituloBox = styled.div`
