@@ -6,7 +6,7 @@ const SkillCard = ({ Skill, IconImg, setPopup }) => {
     <Box
       style={{}}
       options={{ scale: 2, max: 25 }}
-      onClick={() => setPopup(Skill)}
+      // onClick={() => setPopup(Skill)}
     >
       <Icon src={IconImg} />
       <P>{Skill}</P>
