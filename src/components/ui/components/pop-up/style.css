@@ -1,7 +1,7 @@
 @keyframes fadedown {
     from {
         opacity: 0;
-        transform: translateY(-100px);
+        transform: translateY(-300px);
     }
 
     to {
