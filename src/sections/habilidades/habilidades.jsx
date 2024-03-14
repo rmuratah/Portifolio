@@ -16,7 +16,7 @@ const Habilidades = () => {
   const [open, setOpen] = useState(false);
 
   return (
-    <Section backgroundcolor={'#92CBDD'}>
+    <Section backgroundcolor={'#696969'}>
       {!open && (
         <AbrirBtn onClick={() => setOpen(true)}>
           <AbrirImg src={ArrowRight} alt="AbrirBtn" />
