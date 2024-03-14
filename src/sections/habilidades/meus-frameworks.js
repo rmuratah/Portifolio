@@ -11,7 +11,7 @@ const MeusFrameWork = [{
         id: 1,
         FrameWork: 'React Js',
         Image: react,
-        Sobre: 'O React.js é uma biblioteca JavaScript de código aberto, mantida pelo Facebook, que é usada para construir interfaces de usuário (UI) para aplicativos da web de uma forma mais eficiente e escalável. Ele permite criar componentes reutilizáveis e declarativos, que são pequenos blocos de código que encapsulam o comportamento e a aparência de partes específicas da interface do usuário.'
+        Sobre: 'O React.js é uma biblioteca JavaScript de código aberto, mantida pelo Facebook, que é usada para construir interfaces de usuário (UI) para aplicativos da web de uma forma mais eficiente e escalável.'
     },
     {
         id: 2,

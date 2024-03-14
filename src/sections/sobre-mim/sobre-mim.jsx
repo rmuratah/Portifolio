@@ -4,7 +4,7 @@ import background from "../../assets/images/background.jpg";
 
 const sobreMim = () => {
   return (
-    <Section image={background}>
+    <Section backgroundcolor={'#696969'}>
       <Box>
         <TextBox>
           <H3>Rafael Murata</H3>
