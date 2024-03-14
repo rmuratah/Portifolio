@@ -8,7 +8,7 @@ const SocialMedia = () => {
   const [textboxcolor, settextboxcolor] = useState("white");
 
   return (
-    <Section backgroundcolor={'#add8e6'}>
+    <Section backgroundcolor={'#696969'}>
       <SectionBox>
         <TextBox>
           <P textboxcolor={textboxcolor}>Redes Sociais</P>
