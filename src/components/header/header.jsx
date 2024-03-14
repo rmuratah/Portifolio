@@ -25,4 +25,5 @@ const Button = styled.button`
   border: 1px solid black;
   margin: 20px;
   cursor: pointer;
+  text-transform: uppercase;
 `;
